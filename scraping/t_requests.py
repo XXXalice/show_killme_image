@@ -1,12 +1,28 @@
+import doctest
 import requests
 
-url = "https://xxxalice.github.io/"
 
-payload = {
-    'key1' : "value1",
-    "key2" : "value2"
-}
 
-uri_add_query = requests.get(url=url, params=payload)
+def requests_test(query):
+    '''
+    try accsess my hp
+    >>> from t_requests import requests_test
+    >>> requests_test('hello')
+    <Response [200]>
 
-print(uri_add_query.text)
+    >>> requests_test('asdf')
+    <Response [200]>
+    '''
+    url = "https://xxxalice.github.io/"
+
+    q = {
+        "q" : query
+    }
+
+    uri_add_query = requests.get(url=url, params=q)
+
+    return uri_add_query
+
+
+if __name__ == '__main__':
+    doctest.testmod()
