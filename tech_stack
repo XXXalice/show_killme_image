@@ -1,2 +1,5 @@
 doctest
 requests
+gunzip
+gcloud
+gsutil
