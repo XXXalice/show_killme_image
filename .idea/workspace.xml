@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d12733b3-cc13-42aa-9868-f18a2e9a3c7b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scraping/check_env.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scraping/setiment.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scraping/src/entity.json" afterPath="$PROJECT_DIR$/scraping/src/entity.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tech_stack" afterPath="$PROJECT_DIR$/tech_stack" />
-    </list>
+    <list default="true" id="d12733b3-cc13-42aa-9868-f18a2e9a3c7b" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
