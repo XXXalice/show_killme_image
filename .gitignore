@@ -107,3 +107,4 @@ venv.bak/
 #カスタム
 .idea/
 .DS_Store
+api/web_sample/flaskr/flaskr.db
