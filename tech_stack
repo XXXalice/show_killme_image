@@ -3,3 +3,6 @@ requests
 gunzip
 gcloud
 gsutil
+sqlalchemy
+flask
+mysql56
