@@ -1,0 +1,4 @@
+#すでにインストール済みです
+
+Flask
+Flask-SQLAlchemy
