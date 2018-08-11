@@ -2,7 +2,7 @@ from flask import request, redirect, url_for, render_template, flash
 from flask import jsonify
 from flaskr import app, db
 from flaskr.models import Entry
-import random
+import random, math
 
 @app.route('/')
 def show_entries():
@@ -26,5 +26,17 @@ def add_entry():
 def random_num():
     response = {
         'randnum': random.randint(0,100)
+    }
+    return jsonify(response)
+
+
+@app.route('/v1/api/circle/<radius>')
+def circle_area(radius):
+    try:
+        area = math.pi * float(radius) * float(radius)
+    except:
+        area = "Error."
+    response = {
+        'area':area
     }
     return jsonify(response)
