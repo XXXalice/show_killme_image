@@ -2,7 +2,7 @@ from flask import request, redirect, url_for, render_template, flash
 from flask import jsonify
 from flaskr import app, db
 from flaskr.models import Entry
-import random, math
+import random, math, json
 
 @app.route('/')
 def show_entries():
@@ -40,3 +40,36 @@ def circle_area(radius):
         'area':area
     }
     return jsonify(response)
+
+
+@app.route('/v1/api/json/<key>', methods=['POST'])
+def post(key):
+    result = set_property(key, json.loads(request.data))
+    return jsonify(result)
+
+
+def set_property(key, properties):
+    file_name = key + '.json'
+    data = read_model(file_name)
+    if data is None:
+        data = {}
+    data.update(properties)
+    result = write_model(file_name, data)
+    return result
+
+def read_model(file_name):
+    try:
+        with open(file_name, 'r') as f:
+            return json.load(f)
+    except Exception as e:
+        print(e)
+        return None
+
+def write_model(file_name, data):
+    try:
+        with open(file_name, 'w') as f:
+            json.dump(data, f, sort_keys=True, indent=4, ensure_ascii=True)
+            return data
+    except Exception as e:
+        print(e)
+        return None
