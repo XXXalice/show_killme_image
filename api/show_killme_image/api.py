@@ -1,4 +1,4 @@
-from flask import request, Flask
+from flask import request, Flask, redirect
 from killme import Killme
 import random
 
@@ -9,7 +9,7 @@ def return_killme_icon():
     killme = Killme()
     icons_url = killme.fetch_images()
     result = random.choice(icons_url)
-    return result
+    return redirect(result)
 
 
 def main():
