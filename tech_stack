@@ -7,3 +7,4 @@ sqlalchemy
 flask
 mysql56
 beautifulsoup4
+docker

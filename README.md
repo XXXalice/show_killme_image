@@ -9,3 +9,5 @@ server/killme_api
 ```
 
 で画像にリダイレクト
+
+おいおいdocker環境でherokuにデプロイするつもり
