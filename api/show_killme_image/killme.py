@@ -3,6 +3,9 @@ import requests
 import sys
 
 class Killme:
+    '''
+    画像スクレイピング
+    '''
     def __init__(self,url='http://killmebaby.tv/special_icon.html'):
         self.url = url
         try:

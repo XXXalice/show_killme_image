@@ -4,6 +4,10 @@ import random
 
 app = Flask(__name__)
 
+@app.route("/")
+def welcome():
+    return "welcome!"
+
 @app.route("/api/killme")
 def return_killme_icon():
     killme = Killme()
@@ -14,7 +18,7 @@ def return_killme_icon():
 
 def main():
     try:
-        app.run(debug=True)
+        app.run(host='0.0.0.0', port=5000, debug=True)
     except Exception as e:
         print("occur an error.")
         exit()
